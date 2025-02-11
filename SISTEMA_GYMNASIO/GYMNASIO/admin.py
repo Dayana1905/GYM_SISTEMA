@@ -11,8 +11,10 @@ class ClienteAdmin(admin.ModelAdmin):
 class PlanAdmin(admin.ModelAdmin):
     list_display = ('nombre_plan', 'precio', 'duracion_meses')  
     search_fields = ('nombre_plan',) 
+
 @admin.register(Inscripcion)
 class InscripcionAdmin(admin.ModelAdmin):
-    list_display = ('cliente', 'plan', 'fecha_inicio', 'fecha_fin')  
-    search_fields = ('cedula__cedula', 'plan__nombre_plan')  
+    list_display = ['cliente', 'plan', 'fecha_inicio', 'fecha_fin']
+    search_fields = ['cliente__nombre', 'plan__nombre_plan']
+
  

@@ -46,5 +46,4 @@ class Inscripcion(models.Model):
         db_table = 'Inscripcion'
 
     def __str__(self):
-        
-        return f"{self.cedula.nombre} {self.cedula.apellido} - {self.plan.nombre_plan}"
+        return f"{self.cliente.nombre} {self.cliente.apellido} - {self.plan.nombre_plan}"
